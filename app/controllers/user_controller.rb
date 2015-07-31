@@ -1,10 +1,5 @@
-class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
-
-  
-  def create
-    user = User.new( user_params )
-  end
+class UserController < ApplicationController
+  before_filter :authenticate_user!
 
   def update
     if current_user.update_attributes(user_params)
@@ -20,13 +15,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def index
-    @users = User.all
-  end
-
   private
 
   def user_params
     params.require(:user).permit(:name)
-end
 end
