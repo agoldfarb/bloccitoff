@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def new
     user = User.new
+  end
   
   def update
     if current_user.update_attributes(user_params)
@@ -26,5 +27,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name)
-end
+  end
 end
