@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
-  
-  def create
-    user = User.new( user_params )
-  end
 
+  def new
+    user = User.new
+  
   def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "User information updated"
