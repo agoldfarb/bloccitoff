@@ -4,4 +4,5 @@
     <%= link_to 'Item Completed', user_item_path(@user, item), method: :delete, remote: true %>
   </button>
   <h4 class='list-group-item-heading'><%= item.name %></h4> 
+  <p class='list-group-item-text'><%= item.days_left %> days left to complete</p>
 </div>
