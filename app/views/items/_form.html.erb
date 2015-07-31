@@ -1,0 +1,10 @@
+<%= form_for [@user, Item.new] do |f| %>
+  <h3> Add an item to your to-do list </h3>
+    <div class = "field">
+      <%= f.label :name %> <br />
+      <%= f.text_field :name %>
+    </div>
+    <div class ="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

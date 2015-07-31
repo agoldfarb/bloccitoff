@@ -2,6 +2,9 @@
   <div class="col-md-8">
     <div class="media-body">
          <h2 class="media-heading"><%= @user.name %></h2>
-         </div>
+         <h2> <%= @user.email %> </h2>
+         <p> <%= render 'items/form' %> </p>
+         <p> <%= render @items %> </p>
         </div>
       </div>
+    </div>
